@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+    border: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#9D53DB,#8D68F2,#DC5FF9);
+    background-repeat: no-repeat;
+}
+
+main{
+    width: 60%;
+}
+
+.jogo{
+    padding: 15px;
+    background-color: #5354DB;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.resposta{
+    background-color: #8D68F2;
+    border-radius: 15px;
+    display: flex;
+    width: 100%;
+}
+
+.palavraAdivinha{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.adivinha{
+    background-color: #8D68F2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: large;
+    border-bottom: 5px solid black;
+    margin: 5px;
+}
+
+.forca{
+   margin-bottom: 10px;
+    width: 425px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.basePoste{
+    width: 10px;
+    height: 300px;
+    background-color: black;
+    margin-top: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.baseTopoPoste{
+    width: 100px;
+    height: 10px;
+    background-color: black;
+    position: relative;
+    top: -87.5%;
+}
+
+.corda{
+    width: 10px;
+    height: 140px;
+    background-color: black;
+    position: relative;
+    top: -47%;
+}
+
+.boneco{
+    background-color: #8D68F2;
+    margin-left: -45px; 
+}
+
+.cabeca{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 8px solid black;
+    margin-left: 20px;  
+}
+
+.tronco{
+    display: flex;
+}
+
+.bracoEsq{
+    width: 8px;
+    height: 40px;
+    background-color: black;
+    margin-top: 10px;
+    position: relative;
+    left: 20px;
+    transform: rotate(45deg);
+}
+
+.torso{
+    width: 8px;
+    height: 80px;
+    background-color: black;
+}
+
+.bracoDir{
+    width: 8px;
+    height: 40px;
+    background-color: black;
+    margin-top: 10px;
+    position: relative;
+    left: 8px;
+    transform: rotate(-45deg);
+}
+
+.pernas{
+    display: flex;
+}
+
+.peEsq{
+    width: 8px;
+    height: 40px;
+    background-color: black;
+    margin-top: -8px;
+    position: relative;
+    left: 20px;
+    transform: rotate(45deg);
+}
+
+.peDir{
+    width: 8px;
+    height: 40px;
+    background-color: black;
+    margin-top: -8px;
+    position: relative;
+    left: 42px;
+    transform: rotate(-45deg);
+}
+
+.palavraRes{
+    margin: 10px 0px;
+    background-color: #DB40F5;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.teclado{
+    background-color: #DB40F5;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputTentativa{
+    background-color: blanchedalmond;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn_tentar{
+    background-color: rgb(129, 44, 108);
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_tentar:hover{
+    background-color: rgba(177, 61, 148, 0.726);
+}
+
+.divSumir{
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    background-color: #7552d4;
+}
+
+.aparecer{
+    display: none !important;
+}
+
+.sumir{
+    display: flex !important;
+}
+
+#escura{
+    width: 100vw;
+    height: 100vh;
+    opacity: 95%;
+    background-color: black;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    position: absolute;
+  }

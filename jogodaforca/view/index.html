@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="../css/jogodaforca.css">
+</head>
+<body>
+    <div id="escura">
+        <div>Fim de jogo</div>
+    </div>
+    <main>
+        
+        <div class="jogo">
+            <h2 class="titulo">Jogo da Forca</h2>
+            <div class="resposta">
+                <div class="palavraAdivinha"></div>
+                <div class="forca">
+                    <div class="basePoste"></div>
+                    <div class="baseTopoPoste"></div>
+                    <div class="corda"></div>
+                        
+                    
+                    <div class="boneco">
+                        <div class="cabeca aparecer aparecer" id="cabeca"></div>
+                        <div class="tronco">
+                            <div class="bracoEsq aparecer" id="bracoEsq"></div>
+                            <div class="torso aparecer" id="torso"></div>
+                            <div class="bracoDir aparecer" id="bracoDir"></div>
+                        </div>
+                        <div class="pernas">
+                            <div class="peEsq aparecer" id="peEsq"></div>
+                            <div class="peDir aparecer" id="peDir"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="palavraRes" id="palavraRes">
+                <h2>Letras Tentadas: </h2>
+            </div>
+            <div class="teclado">
+                <input type="text" name="tentativa" class="inputTentativa" id="inputTentativa" placeholder="Escreva sua tentativa:" maxlength="1">
+                <button class="btn_tentar" id="btn_tentar">Tentar</button>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="../js/jogodaforca.js"></script>
+</body>
+</html>
