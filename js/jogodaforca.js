@@ -61,61 +61,52 @@ mostrarAdivinha();
 //Botão para fazer uma tentativa com uma letra digitada
 
 btn_tentar.addEventListener("click",(evt)=>{
-    verificarTentativa(inputTentativa.value);
+    verificarTentativa(inputTentativa.value.toLowerCase());
 
 //Soma-se 1 na variavel vitoria para cada letra igual à tentativa que tiver na palavra
 
     palavrasArray.map((el)=>{
         for(let i = 0; i<el.length;i++){
-            if(inputTentativa.value == el[i] && !tentativas.includes(inputTentativa.value)){
+            if(inputTentativa.value.toLowerCase() == el[i] && !tentativas.includes(inputTentativa.value.toLowerCase())){
                 vitoria++;
             }
         }
-        tentativas.push(inputTentativa.value);
+        tentativas.push(inputTentativa.value.toLowerCase());
     })
     inputTentativa.innerHTML=""
 
 //Se o numeros de tentativas certas for igual ao tamanho da palavra a ser adivinhada então vc Ganhou!
 
     if(vitoria == qtd_letra){
-        encerrarJogo("Parabens vc ganhou!")
+        setTimeout(encerrarJogo,2000,"Parabens você Ganhou!");
     }
     
 //Se no DOM das letras já usadas não tiver nada vai ser criado a div da letra usada, e já estiver no DOM não criará outra div da mesma
 
-if(inputTentativa.value != ""){
+if(inputTentativa.value.toLowerCase() != ""){
     if(arraypalavraRes.length == 0){
         const divpalavraRes = document.createElement("div");
         divpalavraRes.setAttribute("class","adivinha");
-        divpalavraRes.innerHTML = inputTentativa.value;
+        divpalavraRes.innerHTML = inputTentativa.value.toLowerCase();
         palavraRes.appendChild(divpalavraRes)
-        arraypalavraRes.push(inputTentativa.value); 
+        arraypalavraRes.push(inputTentativa.value.toLowerCase()); 
     }
 
-    let seguroPalavraRes = arraypalavraRes.some(el=>el == inputTentativa.value);
+    let seguroPalavraRes = arraypalavraRes.some(el=>el == inputTentativa.value.toLowerCase());
 
     if(!seguroPalavraRes){
         const divpalavraRes = document.createElement("div");
         divpalavraRes.setAttribute("class","adivinha");
-        divpalavraRes.innerHTML = inputTentativa.value;
+        divpalavraRes.innerHTML = inputTentativa.value.toLowerCase();
         palavraRes.appendChild(divpalavraRes);
-        arraypalavraRes.push(inputTentativa.value); 
+        arraypalavraRes.push(inputTentativa.value.toLowerCase()); 
     }
 }
-
+    inputTentativa.value = "";
+    inputTentativa.focus();
 })
 
-//Verificando se todas as palavras ja foram adivinhadas para então salvar o jogo
-
-let divSumir = [...document.querySelectorAll(".a")];
-
-    const adivinha = document.querySelectorAll(".adivinha");
-
-    if(divSumir.length==adivinha.length){
-        setTimeout(encerrarJogo("Que pena você perdeu!"),3000);
-    }
-
-//Verificar se a lettra tentada é igual a alguma da palavra a ser adivinhada e retirando a divSumir se sim, e se não diminuindo a quantidade de vidas
+//Verificar se a letra tentada é igual a alguma da palavra a ser adivinhada e retirando a divSumir se sim, e se não diminuindo a quantidade de vidas
 
 verificarTentativa=(letra)=>{
 

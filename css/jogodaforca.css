@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom,#9D53DB,#8D68F2,#DC5FF9);
+    background-image: linear-gradient(to bottom,#751dbd,#9527c0,#4d1ecc);
     background-repeat: no-repeat;
 }
 
@@ -25,11 +25,12 @@ main{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+    box-shadow: 15px 15px 15px #4c1eccaf;
 }
 
 h2{
     text-align: center;
-    color: white;
+    color: rgb(241, 238, 238);
     margin-bottom: 5px;
 }
 
@@ -162,7 +163,7 @@ h2{
 
 .palavraRes{
     margin: 10px 0px;
-    background-color: #DB40F5;
+    background-color: #ba34d1;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -171,7 +172,7 @@ h2{
 }
 
 .teclado{
-    background-color: #DB40F5;
+    background-color: #ba34d1;
     border-radius: 15px;
     display: flex;
     justify-content: center;
